@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.navlinks li {
+    margin-left: 10px;
+}
+
+.navlinks a {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+    color: #333;
+}
+
+.navlinks a:hover {
+    color: #007BFF;
+    text-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+}
+.regform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 8% auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+.register {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input {
+    margin: 12px 0;
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+.submit {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit:hover {
+    background-color: #0056b3;
+}
+.show{
+    display: flex;
+    align-content: flex-start;
+}
+.checkbox {
+    display: flex;              
+    align-items: center;     
+    margin-top: 10px;
+}
+
+input[type="checkbox"] {
+    margin: 0;     
+    width: auto;
+}
+
+label {
+    margin-left: 5px;    
+    cursor: pointer;       
+}
+
+@media screen and (max-width: 1024px) {
+    .regform {
+        margin: 5% auto;
+        padding: 40px;
+        width: 90%;
+    }
+    .register {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .regform {
+        margin: 8% 5%;
+        padding: 30px;
+        width: 90%;
+    }
+    input {
+        width: 100%;
+    }
+    .submit {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .navlinks a {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .regform {
+        margin-top: 120px;
+        padding: 20px;
+    }
+    .register {
+        font-size: 22px;
+    }
+}
