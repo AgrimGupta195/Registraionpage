@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    
     <nav class="navbar">
         <div class="logo">Passion</div>
         <ul class="navlinks">
@@ -18,19 +20,41 @@
     </nav>
     <div class="regform" id="regform">
         <div class="register">Register Now</div>
-        <form action="">
-            Enter Email
-            <input type="email" name="" id="">
-            Enter Name
-            <input type="text">
-            Enter Password
-            <input type="password" name="" id="">
+        <form action="submit">
+            <p class="intext">Enter Email :</p>
+            <input type="email" placeholder="Enter your Email" name="" id="" required>
+            <p class="intext">Enter Name :</p>
+            <input type="text" placeholder="Enter your Name" maxlength="20" required>
+            <p class="intext">Enter Password :</p>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" required maxlength="12" minlength="10">
+            <p id="strength"> Password is </p>
             <div class="checkbox">
                 <input type="checkbox" name="" id="check">
                 <label for="check">Show Password</label>
             </div>
+            <button class ="submit"type="submit" >Submit</button>
         </form>
-        <button class="submit">Submit</button>
+        
     </div>
+    <section class="contactarea" id ="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        <div class="socialicons">
+            <a href="mailto:agrimgupt195@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" maxlength="50"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Tourism. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+      
 </body>
 </html>
