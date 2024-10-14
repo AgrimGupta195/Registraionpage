@@ -66,3 +66,23 @@ function isSymbol(char) {
   const isAlpha = char.toLowerCase() !== char.toUpperCase();
   return !isDigit && !isAlpha && char !== ' ';
 }
+const starop = document.querySelectorAll(".star");
+
+starop.forEach(op => {
+    var stars =op.querySelectorAll('i');
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        changecolor(stars, index);
+      });
+    });
+});
+
+function changecolor(stars, index) {
+    for (let i = 0; i <= index; i++) {
+      stars[i].style.color = "gold";
+    }
+    for (let i = index + 1; i < stars.length; i++) {
+      stars[i].style.color = "#747474";
+    }
+}
+
